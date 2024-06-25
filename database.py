@@ -35,6 +35,5 @@ def add_product(db_connection, product: Product):
         # cursor.execute("INSERT INTO products (id, title) VALUES (NULL, '" + product.name+"');")
         db_connection.commit()
         return True
-    # Catch the specific exception sqlite3.IntegrityError.
     except sqlite3.IntegrityError:
         return False
