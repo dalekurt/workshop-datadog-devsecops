@@ -50,7 +50,7 @@ def product_list():
 
 
 @app.route("/api/product/hash", methods=["GET"])
-def getProductHash():
+def get_product_hash():
     import hashlib
 
     products = db.get_products(db_connection, 100, 0)
