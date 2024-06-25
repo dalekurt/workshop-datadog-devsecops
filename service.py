@@ -59,7 +59,7 @@ def get_product_hash():
         return "error, specify a product id", 500
     if product_id > len(products):
         return "invalid product id", 500
-    hash = hashlib.md5(products[product_id].name.encode("utf-8")).hexdigest()
+    hash = hashlib.sha256(products[product_id].name.encode("utf-8")).hexdigest()
     return hash
 
 
